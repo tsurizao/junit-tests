@@ -40,4 +40,12 @@ public class Student {
         double divisor = (this.grades.size() == 0) ? 1 : this.grades.size();
         return sum / divisor;
     }
+
+    public void updateGrade(int index, int value) {
+        this.grades.set(index, value);
+    }
+
+    public void deleteGrade(int index){
+
+    }
 }

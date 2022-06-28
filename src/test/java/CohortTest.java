@@ -44,4 +44,12 @@ public class CohortTest {
         assertEquals(66.6, jason.getGradeAverage(), 0.07);
         assertEquals(16.6, cohort.getCohortAverage(), 0.07);
     }
+
+    @Test
+    public void testCohortFindStudentsById(){
+        Student student = cohort.findStudentById(1L);
+        assertSame("Cory", student.getName());
+        Student student1 = cohort.findStudentById(3L);
+        assertSame("Casey", student1.getName());
+    }
 }
