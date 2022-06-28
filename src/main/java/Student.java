@@ -40,4 +40,18 @@ public class Student {
     public void setGrades(ArrayList<Integer> grades) {
         this.grades = grades;
     }
+
+    // adds the given grade to the grades list
+    public void addGrade(int grade){
+        this.grades.add(grade);
+    }
+
+    // returns the average of the students grades
+    public double getGradeAverage(){
+        double gradeTotal = 0;
+        for (Integer grade : this.grades) {
+            gradeTotal += grade;
+        }
+        return gradeTotal / grades.size();
+    }
 }
