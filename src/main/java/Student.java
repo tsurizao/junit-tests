@@ -9,6 +9,13 @@ public class Student {
     private ArrayList<Integer> grades;
 
     public Student() {
+        this.grades = new ArrayList<>();
+    }
+
+    public Student(long id, String name){
+        this.id = id;
+        this.name = name;
+        this.grades = new ArrayList<>();
     }
 
     public Student(long id, String name, ArrayList<Integer> grades) {
@@ -49,7 +56,7 @@ public class Student {
     // returns the average of the students grades
     public double getGradeAverage(){
         double gradeTotal = 0;
-        for (Integer grade : this.grades) {
+        for (double grade : this.grades) {
             gradeTotal += grade;
         }
         return gradeTotal / grades.size();
